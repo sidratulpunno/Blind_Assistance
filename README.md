@@ -6,6 +6,9 @@ offline object detection (TensorFlow Lite).
 
 ---
 
+##App Screenshot
+![App Screenshot](https://github.com/sidratulpunno/Blind_Assistance/blob/main/assets/images/app%20screenshot.png?raw=true)
+
 ## ✨ Features
 
 ### 🔊 Speech-Based Mode Selection
