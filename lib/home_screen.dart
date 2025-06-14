@@ -7,6 +7,7 @@ import 'package:google_ml_kit_example/google_generative_ai_service.dart';
 import 'package:google_ml_kit_example/tts_service.dart';
 import 'dart:async';
 import 'package:google_ml_kit_example/app_state.dart';
+import 'package:flutter_dotenv/flutter_dotenv.dart';
 
 class HomeScreen extends StatefulWidget {
   @override
@@ -29,8 +30,7 @@ class _HomeScreenState extends State {
   @override
   void initState() {
     super.initState();
-
-    const apiKey = 'AIzaSyAE4T5hgpNDpb_5GeXph7AbVzgmJ4_S9Bg';
+    var apiKey = dotenv.env['GEMINI_API_KEY'].toString();
     _voiceCommandService = VoiceCommandService();
     _cameraService = CameraService();
     _aiService = GoogleGenerativeAIService(apiKey: apiKey);

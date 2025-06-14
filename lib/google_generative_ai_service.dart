@@ -1,6 +1,7 @@
 import 'package:google_generative_ai/google_generative_ai.dart';
 import 'package:camera/camera.dart';
 import 'package:google_ml_kit_example/app_state.dart'; // Import for XFile support
+import 'package:flutter_dotenv/flutter_dotenv.dart';
 
 class GoogleGenerativeAIService {
   final String apiKey;
