@@ -48,3 +48,4 @@ flutter:
   assets:
     - assets/ml/
     - assets/images/
+    - .env

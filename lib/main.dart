@@ -8,12 +8,13 @@ Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
 
   // Speak response text every time the app starts
+  await dotenv.load();
+
   TTSService ttsService = TTSService();
   String welcomeMessage =
       "Please press the button and say give direction to get direction and describe for description and offline direction for direction without internet and say stop to stop the process";
   // tap Start Listening and say 'Give direction' to get directions or 'Describe' for a description.
   await ttsService.speak(welcomeMessage);
-  await dotenv.load();
 
   runApp(MyApp());
 }
