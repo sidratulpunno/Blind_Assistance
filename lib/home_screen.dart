@@ -23,9 +23,7 @@ class _HomeScreenState extends State {
   bool _isStopCalled = false;
 
   String _responseText =
-      "The image shows a large grey metal gate in front of a building with brown walls and a red roof. To the left of the gate, there are lush green bushes and trees. The ground in front of the gate is a dirt path with some wet patches and scattered leaves. The sky is visible above the building and trees.";
-
-  // "Please press the button and say give direction to get direction and describe for description and offline direction for direction without internet and say stop to stop the process";
+      "Please press the button and say give direction to get direction and describe for description and offline direction for direction without internet and say stop to stop the process";
 
   bool _isListening = false; // Flag to track if we're currently listening
 
@@ -66,7 +64,6 @@ class _HomeScreenState extends State {
       AppState.prompt = 2;
       _captureAndProcessPhoto();
     } else if (command.toLowerCase().contains("stop direction")) {
-      print("Stop called");
       _isStopCalled = true;
       _stopContinuousCapture();
       // String? currentRoute = ModalRoute.of(context)?.settings.name;
@@ -153,7 +150,7 @@ class _HomeScreenState extends State {
                     _responseText,
                     style: Theme.of(context)
                         .textTheme
-                        .titleLarge, // Use themed text style
+                        .bodySmall, // Use themed text style
                     textAlign:
                         TextAlign.start, // Left align for better readability
                   ),
@@ -198,13 +195,11 @@ class _HomeScreenState extends State {
                   });
                   _ttsService.stop();
                   _voiceCommandService.startListening(_onVoiceCommand);
-                  print("Listening started");
                 } else {
                   _voiceCommandService.stopListening();
                   setState(() {
                     _isListening = false;
                   });
-                  print("Listening stopped");
                 }
               },
               style: ElevatedButton.styleFrom(

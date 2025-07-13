@@ -11,12 +11,10 @@ class GoogleGenerativeAIService {
   Future<String> analyzeImage(XFile image) async {
     try {
       if (AppState.prompt == 1) {
-        print('yesssssssssssssssssssssssssssssssssssss');
         AppState.textPart = dotenv.env['PROMPT_1'].toString();
 
         // 'i can not see please give me direction to go forward within 20 words and do not tell sorry and how many steps to go :';
       } else if (AppState.prompt == 2) {
-        print('noooooooooooooooooooooooooooooooooooooo');
         AppState.textPart = dotenv.env['PROMPT_2'].toString();
       }
 
@@ -30,7 +28,6 @@ class GoogleGenerativeAIService {
         apiKey: apiKey,
       );
 
-      print('helooooooooooooooooooooooooooooooooooooooooooooooo');
       print(AppState.textPart);
 
       // Prepare content with the text prompt and image data
@@ -49,7 +46,6 @@ class GoogleGenerativeAIService {
       // Return the model's description or a default message
       return response.text ?? 'No description provided.';
     } catch (e) {
-      print('hiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiii');
       print('Error analyzing image: $e');
       return 'Failed to analyze image. Please try again later.';
     }
