@@ -23,7 +23,9 @@ class _HomeScreenState extends State {
   bool _isStopCalled = false;
 
   String _responseText =
-      "Please press the button and say give direction to get direction and describe for description and offline direction for direction without internet and say stop to stop the process";
+      "The image shows a large grey metal gate in front of a building with brown walls and a red roof. To the left of the gate, there are lush green bushes and trees. The ground in front of the gate is a dirt path with some wet patches and scattered leaves. The sky is visible above the building and trees.";
+
+  // "Please press the button and say give direction to get direction and describe for description and offline direction for direction without internet and say stop to stop the process";
 
   bool _isListening = false; // Flag to track if we're currently listening
 
@@ -151,7 +153,7 @@ class _HomeScreenState extends State {
                     _responseText,
                     style: Theme.of(context)
                         .textTheme
-                        .bodySmall, // Use themed text style
+                        .titleLarge, // Use themed text style
                     textAlign:
                         TextAlign.start, // Left align for better readability
                   ),

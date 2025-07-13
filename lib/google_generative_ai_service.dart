@@ -12,14 +12,12 @@ class GoogleGenerativeAIService {
     try {
       if (AppState.prompt == 1) {
         print('yesssssssssssssssssssssssssssssssssssss');
-        AppState.textPart =
-            ' You are a real-time navigation assistant for visually impaired users. I am sending you a photo captured from a forward-facing camera that shows the current environment. Based solely on this image, please provide clear, step-by-step navigational instructions. Your response should include: 1. The approximate number of steps or distance to safely cover before any directional change 2. Identification of any obstacles or objects in the path 3. Specific guidance on how to navigate around these obstacles (e.g., "take a slight left to avoid an obstacle on the right or the door is close or the wall is near stop").4. Any additional safety recommendations or cautions if the scene appears ambiguous or potentially hazardous.Please ensure the language is simple, direct, and easy to understand. give me response under 12 words';
+        AppState.textPart = dotenv.env['PROMPT_1'].toString();
 
         // 'i can not see please give me direction to go forward within 20 words and do not tell sorry and how many steps to go :';
       } else if (AppState.prompt == 2) {
         print('noooooooooooooooooooooooooooooooooooooo');
-        AppState.textPart =
-            'please describe the image in normal text without too much space:';
+        AppState.textPart = dotenv.env['PROMPT_2'].toString();
       }
 
       // Read image bytes
