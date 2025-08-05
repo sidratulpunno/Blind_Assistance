@@ -150,7 +150,7 @@ class _HomeScreenState extends State {
                     _responseText,
                     style: Theme.of(context)
                         .textTheme
-                        .bodySmall, // Use themed text style
+                        .titleLarge, // Use themed text style
                     textAlign:
                         TextAlign.start, // Left align for better readability
                   ),

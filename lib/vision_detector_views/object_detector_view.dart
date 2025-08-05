@@ -6,6 +6,7 @@ import 'package:flutter_tts/flutter_tts.dart';
 import 'detector_view.dart';
 import 'painters/object_detector_painter.dart';
 import 'utils.dart';
+import 'package:vibration/vibration.dart';
 
 class ObjectDetectorView extends StatefulWidget {
   @override
@@ -123,6 +124,27 @@ class _ObjectDetectorView extends State<ObjectDetectorView> {
     _canProcess = true;
   }
 
+  Future<void> _triggerWarningVibration() async {
+    final hasVibrator = await Vibration.hasVibrator() ?? false;
+    if (!hasVibrator) {
+      print('⚠️ Device does not support vibration.');
+      return;
+    }
+
+    try {
+      final hasCustomSupport =
+          await Vibration.hasCustomVibrationsSupport() ?? false;
+      if (hasCustomSupport) {
+        // Strong warning vibration pattern
+        await Vibration.vibrate(pattern: [0, 1000]);
+      } else {
+        await Vibration.vibrate(duration: 1000);
+      }
+    } catch (e) {
+      print('❌ Vibration failed: $e');
+    }
+  }
+
   Future<void> _processImage(InputImage inputImage) async {
     if (_objectDetector == null || !_canProcess || _isBusy) return;
     _isBusy = true;
@@ -160,17 +182,22 @@ class _ObjectDetectorView extends State<ObjectDetectorView> {
           _calculateDistance(object.boundingBox, inputImage.metadata!.size);
       final distanceFeet = distance * 3.28084; // Convert meters to feet
 
-      // if (distanceFeet < 0.5 && !_isWarningActive) {
-      //   _isWarningActive = true;
-      //   await _speakWarning(
-      //       "Warning! $name is very close, only ${distanceFeet.toStringAsFixed(1)} feet away.");
-      //   await Future.delayed(Duration(seconds: 2)); // Add delay for warnings
-      //   _isWarningActive = false;
-      // } else if (!_isWarningActive) {
-      //   await _speak(
-      //       "Detected a $name, approximately ${distanceFeet.toStringAsFixed(1)} feet away.");
-      //   await Future.delayed(Duration(seconds: 4));
-      // }
+      if (distanceFeet < 1 && !_isWarningActive) {
+        _isWarningActive = true;
+
+        // Vibrate fully (e.g., 1000ms)
+        await _triggerWarningVibration();
+
+        await _speakWarning(
+            "Warning! $name is very close, only ${distanceFeet.toStringAsFixed(1)} feet away.");
+
+        await Future.delayed(const Duration(seconds: 2));
+        _isWarningActive = false;
+      } else if (!_isWarningActive) {
+        await _speak(
+            "Detected a $name, approximately ${distanceFeet.toStringAsFixed(1)} feet away.");
+        await Future.delayed(const Duration(seconds: 4));
+      }
     }
 
     _isBusy = false;
