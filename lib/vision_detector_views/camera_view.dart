@@ -28,7 +28,7 @@ class CameraView extends StatefulWidget {
 }
 
 class _CameraViewState extends State<CameraView> {
-  static List<CameraDescription> _cameras = [];
+  List<CameraDescription> _cameras = [];
   CameraController? _controller;
   int _cameraIndex = -1;
   double _currentZoomLevel = 1.0;
