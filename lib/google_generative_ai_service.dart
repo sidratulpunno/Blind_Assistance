@@ -22,7 +22,7 @@ class GoogleGenerativeAIService {
       final imageBytes = await image.readAsBytes();
 
       final model = GenerativeModel(
-        model: 'gemini-2.0-flash', // Using the updated model name
+        model: 'gemma-3-27b-it', // 'gemini-2.0-flash'
         apiKey: apiKey,
       );
 
@@ -58,21 +58,29 @@ class GoogleGenerativeAIService {
       return;
     }
 
-    // Vibration patterns remain the same
-    final List<int> leftPattern = [0, 200, 100, 200];
-    final List<int> rightPattern = [0, 200, 100, 200];
+    // Custom vibration pattern: Left-Left-Right-Right
+    final List<int> directionalPattern = [
+      0, // Start immediately
+      200, 100, // Left: vibrate, pause
+      200, 400, // Left: vibrate again, pause before right
+      200, 100, // Right: vibrate, pause
+      200 // Right: vibrate again
+    ];
+
     final hasCustomSupport =
         await Vibration.hasCustomVibrationsSupport() ?? false;
 
     try {
       if (hasCustomSupport) {
-        if (text.contains('left')) {
-          print('🔄 Triggering LEFT vibration...');
-          await Vibration.vibrate(pattern: leftPattern);
+        if (text.contains('left') && text.contains('right')) {
+          print('🔄 Triggering FULL vibration (LEFT ➝ RIGHT)...');
+          await Vibration.vibrate(pattern: directionalPattern);
+        } else if (text.contains('left')) {
+          print('🔄 Triggering LEFT-only vibration...');
+          await Vibration.vibrate(pattern: [0, 200, 100, 200]);
         } else if (text.contains('right')) {
-          // Use 'else if' to avoid both vibrating at once
-          print('🔄 Triggering RIGHT vibration...');
-          await Vibration.vibrate(pattern: rightPattern);
+          print('🔄 Triggering RIGHT-only vibration...');
+          await Vibration.vibrate(pattern: [0, 200, 100, 200]);
         }
       } else {
         print('⚠️ Fallback to basic vibration...');
