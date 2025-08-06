@@ -23,7 +23,7 @@ class _HomeScreenState extends State<HomeScreen> {
   bool _isStopCalled = false;
 
   String _responseText =
-      "Press the button and say 'give direction', 'describe', or 'offline direction'.";
+      "you are online. please Press the button and say 'give direction', 'describe', or 'offline direction'.";
   bool _isListening = false;
 
   @override
