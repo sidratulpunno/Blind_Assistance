@@ -103,36 +103,75 @@ class _CameraViewState extends State<CameraView> {
                       ),
               ),
               SizedBox(height: 20),
-              ElevatedButton(
-                onPressed: () {
+              // ElevatedButton(
+              //   onPressed: () {
+              //     Navigator.of(context).pushNamed('/home');
+              //   },
+              //   style: ElevatedButton.styleFrom(
+              //     backgroundColor: Color.fromRGBO(255, 122, 48, 80),
+              //     // Use primary color from theme
+              //     foregroundColor: Colors.white,
+              //     // Ensure good text contrast
+              //     padding: const EdgeInsets.symmetric(
+              //         horizontal: 50.0, vertical: 33.0),
+              //     // Slightly adjusted padding
+              //     textStyle: const TextStyle(
+              //         fontSize: 22, fontWeight: FontWeight.bold),
+              //     // Bold and slightly larger text
+              //     shape: RoundedRectangleBorder(
+              //         borderRadius: BorderRadius.circular(22.0)),
+              //     // Rounded corners for softer look
+              //     elevation: 3, // Subtle elevation for depth
+              //   ),
+              //   child: Row(
+              //     // Use Row to place icon and text side by side
+              //     mainAxisSize: MainAxisSize.min, // Fit the row to its content
+              //     children: [
+              //       const Icon(Icons.home, color: Colors.white, size: 28),
+              //       // Home icon
+              //       const SizedBox(width: 10),
+              //       // Spacing between icon and text
+              //       const Text("Home Page"),
+              //     ],
+              //   ),
+              // ),
+              GestureDetector(
+                onTap: () {
                   Navigator.of(context).pushNamed('/home');
                 },
-                style: ElevatedButton.styleFrom(
-                  backgroundColor: Colors.green,
-                  // Use primary color from theme
-                  foregroundColor: Colors.white,
-                  // Ensure good text contrast
+                child: Container(
                   padding: const EdgeInsets.symmetric(
                       horizontal: 50.0, vertical: 33.0),
-                  // Slightly adjusted padding
-                  textStyle: const TextStyle(
-                      fontSize: 22, fontWeight: FontWeight.bold),
-                  // Bold and slightly larger text
-                  shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(22.0)),
-                  // Rounded corners for softer look
-                  elevation: 3, // Subtle elevation for depth
-                ),
-                child: Row(
-                  // Use Row to place icon and text side by side
-                  mainAxisSize: MainAxisSize.min, // Fit the row to its content
-                  children: [
-                    const Icon(Icons.home, color: Colors.white, size: 28),
-                    // Home icon
-                    const SizedBox(width: 10),
-                    // Spacing between icon and text
-                    const Text("Home Page"),
-                  ],
+                  decoration: BoxDecoration(
+                    gradient: const LinearGradient(
+                      colors: [Color(0xFF2E3192), Color(0xFF1BFFFF)],
+                      begin: Alignment.topLeft,
+                      end: Alignment.bottomRight,
+                    ),
+                    borderRadius: BorderRadius.circular(22.0),
+                    boxShadow: [
+                      BoxShadow(
+                        color: Colors.black.withOpacity(0.2),
+                        offset: const Offset(0, 3),
+                        blurRadius: 6,
+                      ),
+                    ],
+                  ),
+                  child: Row(
+                    mainAxisSize: MainAxisSize.min,
+                    children: const [
+                      Icon(Icons.home, color: Colors.white, size: 28),
+                      SizedBox(width: 10),
+                      Text(
+                        "Home Page",
+                        style: TextStyle(
+                          color: Colors.white,
+                          fontSize: 22,
+                          fontWeight: FontWeight.bold,
+                        ),
+                      ),
+                    ],
+                  ),
                 ),
               ),
             ],
