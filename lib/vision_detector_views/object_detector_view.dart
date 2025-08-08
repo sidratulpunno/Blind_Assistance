@@ -162,6 +162,7 @@ class _ObjectDetectorView extends State<ObjectDetectorView> {
       objectDistances[object] = distance * 3.28084;
     }
 
+//Not to show the label we need to turn off
     if (inputImage.metadata?.size != null &&
         inputImage.metadata?.rotation != null) {
       final painter = ObjectDetectorPainter(
