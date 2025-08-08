@@ -26,7 +26,7 @@ class _HomeScreenState extends State<HomeScreen>
   Timer? _photoTimer;
   bool _isStopCalled = false;
   String _responseText =
-      "You are online. Press the microphone and say 'give direction', 'describe', or 'offline direction'.";
+      "You are online. Press the mic and say 'give direction', 'describe', or 'offline direction'.";
   bool _isListening = false;
   late AnimationController _animationController;
 
@@ -38,6 +38,9 @@ class _HomeScreenState extends State<HomeScreen>
     _cameraService = CameraService();
     _aiService = GoogleGenerativeAIService(apiKey: apiKey);
     _ttsService = TTSService();
+    _ttsService.speak(
+        "You are online. Press the mic and say 'give direction', 'describe', or 'offline direction'.");
+
     _cameraService.initializeCamera();
 
     _animationController = AnimationController(

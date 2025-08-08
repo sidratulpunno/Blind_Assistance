@@ -74,8 +74,8 @@ class _MyAppState extends State<MyApp> {
       navigator.pushReplacementNamed('/objectDetector');
     } else if (!isOffline && currentRoute != '/home') {
       // Announce the switch to online mode with instructions.
-      _ttsService.speak(
-          "you are online. please Press the button and say 'give direction', 'describe', or 'offline direction'.");
+      // _ttsService.speak(
+      //     "you are online. please Press the button and say 'give direction', 'describe', or 'offline direction'.");
       navigator.pushReplacementNamed('/home');
     }
   }

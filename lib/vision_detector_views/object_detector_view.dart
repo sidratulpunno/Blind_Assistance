@@ -35,7 +35,6 @@ class _ObjectDetectorView extends State<ObjectDetectorView> {
     'mushrooms': 'lite-model_models_mushroom-identification_v1_1.tflite',
     'landmarks':
         'lite-model_on_device_vision_classifier_landmarks_classifier_north_america_V1_1.tflite',
-    'yolov8': 'yolov8n.tflite',
   };
 
   @override
