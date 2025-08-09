@@ -1,14 +1,17 @@
-import 'package:flutter/material.dart';
-import 'package:camera/camera.dart';
-import 'package:google_fonts/google_fonts.dart';
+import 'dart:async';
 import 'dart:ui';
-import 'package:google_ml_kit_example/voice_command_service.dart';
+
+import 'package:camera/camera.dart';
+import 'package:flutter/material.dart';
+import 'package:flutter_dotenv/flutter_dotenv.dart';
+import 'package:google_fonts/google_fonts.dart';
+import 'package:google_ml_kit_example/app_state.dart';
 import 'package:google_ml_kit_example/camera_service.dart';
 import 'package:google_ml_kit_example/google_generative_ai_service.dart';
 import 'package:google_ml_kit_example/tts_service.dart';
-import 'dart:async';
-import 'package:google_ml_kit_example/app_state.dart';
-import 'package:flutter_dotenv/flutter_dotenv.dart';
+import 'package:google_ml_kit_example/voice_command_service.dart';
+
+import 'main.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({Key? key}) : super(key: key);
@@ -38,8 +41,10 @@ class _HomeScreenState extends State<HomeScreen>
     _cameraService = CameraService();
     _aiService = GoogleGenerativeAIService(apiKey: apiKey);
     _ttsService = TTSService();
-    _ttsService.speak(
-        "You are online. Press the mic and say 'give direction', 'describe', or 'offline direction'.");
+    _ttsService.setSpeechRate(.6);
+    _ttsService.speak(isOfflineGlobal
+        ? "you are in online mode without internet"
+        : "You are online. Press the mic and say 'give direction', 'describe', or 'offline direction'.");
 
     _cameraService.initializeCamera();
 
@@ -128,13 +133,19 @@ class _HomeScreenState extends State<HomeScreen>
   Widget _buildMicButton() {
     return GestureDetector(
       onTap: () {
-        if (!_isListening) {
-          setState(() => _isListening = true);
+        if (isOfflineGlobal) {
           _ttsService.stop();
-          _voiceCommandService.startListening(_onVoiceCommand);
+          _objectDetector();
+          _ttsService.speak("you are in offline mode");
         } else {
-          _voiceCommandService.stopListening();
-          setState(() => _isListening = false);
+          if (!_isListening) {
+            setState(() => _isListening = true);
+            _ttsService.stop();
+            _voiceCommandService.startListening(_onVoiceCommand);
+          } else {
+            _voiceCommandService.stopListening();
+            setState(() => _isListening = false);
+          }
         }
       },
       // This makes the entire transparent area of the GestureDetector tappable.

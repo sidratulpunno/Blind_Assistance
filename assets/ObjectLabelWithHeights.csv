@@ -1,0 +1,589 @@
+ObjectName,AverageHeightMeters
+Smart speaker,0.15
+Virtual reality headset,0.1
+Tumbler,0.2
+Electric kettle,0.25
+Electric razor,0.15
+Packaged goods,0.3
+Kid bike,0.8
+2D barcode,0.01
+1D barcode,0.01
+Water bottle,0.25
+Tortoise,0.2
+Cooker,0.9
+Container,0.5
+Magpie,0.25
+Sea turtle,0.3
+Football,0.22
+Vacuum flask,0.3
+Ambulance,2.5
+Ladder,2
+Toothbrush,0.18
+Syringe,0.1
+Sink,0.2
+Toy,0.3
+T-shirt,0.7
+Organ,1.5
+Cassette deck,0.15
+Apple,0.08
+Paddle,1.2
+Snowman,1.5
+Beer,0.25
+Bridge,10
+Board game,0.05
+Parking meter,1.5
+Traffic light,2
+Croissant,0.05
+Cucumber,0.15
+Radish,0.05
+Towel,1
+Doll,0.3
+Notebook,0.02
+Washing machine,0.85
+Glove,0.25
+Vinyl record,0.01
+Tick,0.01
+Belt,0.05
+Sunglasses,0.05
+Action figure,0.15
+Banjo,0.9
+Cart,1
+Ball,0.2
+Backpack,0.5
+Bicycle,1.1
+Sweater,0.7
+Stadium,20
+Home appliance,0.5
+Centipede,0.02
+Boat,2
+Lighting,0.5
+Surfboard,2
+Chopsticks,0.25
+Boot,0.3
+Headphones,0.1
+Hot dog,0.15
+Shorts,0.4
+Bus,3
+Camera lens,0.1
+Screwdriver,0.2
+Bicycle wheel,0.7
+Flash,0.1
+Barge,3
+Battery,0.05
+Laptop,0.03
+Miniskirt,0.4
+Drill,0.25
+Dress,1
+Bear,1.2
+Waffle,0.05
+Pancake,0.02
+Brown bear,1.2
+Woodpecker,0.2
+Blue jay,0.2
+Pretzel,0.05
+Bagel,0.05
+Teapot,0.2
+Person,1.7
+Bow and arrow,1
+Swimwear,0.5
+Brassiere,0.2
+Bee,0.02
+Bat,0.3
+Starfish,0.05
+Popcorn,0.05
+Burrito,0.15
+Chainsaw,0.4
+Balloon,0.5
+Wrench,0.25
+Tent,1.5
+License plate,0.15
+Lantern,0.3
+Toaster,0.2
+Flashlight,0.2
+Tiara,0.1
+Limousine,2
+Necklace,0.5
+Bracelet,0.05
+Scissors,0.15
+Computer keyboard,0.03
+Printer,0.3
+Traffic sign,2
+Chair,0.9
+Shirt,0.7
+Poster,1
+Thermostat,0.1
+Cheese,0.05
+Sock,0.2
+Fire hydrant,1
+Barbecue grill,1
+Earrings,0.05
+Tie,1
+Cabinetry,1.5
+Suitcase,0.7
+Bodysuit,1
+Business card,0.05
+Vest,0.6
+Muffin,0.07
+Bidet,0.4
+Expresso machine,0.35
+Snack,0.05
+Snowmobile,1.2
+Clock,0.3
+Camel,2
+Figurine,0.15
+Cattle,1.5
+Jet ski,1
+Coat,1
+Suit,1
+Desk,0.75
+Cat,0.3
+Bronze sculpture,1
+Juice,0.25
+Basket,0.3
+Gondola,2
+Beetle,0.02
+Cannon,1.5
+Mouse,0.05
+Wine bottle,0.3
+Comb,0.15
+Slipper,0.05
+Stuffed toy,0.3
+Cookie,0.05
+Fountain,2
+Wine cooler,0.85
+Coin,0.01
+Calculator,0.03
+Cocktail,0.2
+Menu,0.3
+Computer monitor,0.4
+Box,0.3
+Stapler,0.05
+Christmas tree,2
+Cowboy hat,0.15
+Video camera,0.15
+Flip-flops,0.05
+Bean bag,0.8
+Drum,0.5
+Dessert,0.05
+Wine rack,1
+Drink,0.2
+Zucchini,0.15
+Ladle,0.3
+Baseball cap,0.1
+Smartwatch,0.05
+Dairy,0.2
+Bib,0.3
+Bowtie,0.05
+Toy train,0.1
+Dice,0.02
+Oven,0.85
+Dinosaur,2
+Display device,0.4
+Goggles,0.05
+Wallet,0.1
+Ratchet,0.25
+Couch,0.8
+Cricket ball,0.07
+Winter melon,0.3
+Spatula,0.3
+Cap,0.1
+Whiteboard,1.5
+Pencil sharpener,0.05
+Door,2
+Hat,0.15
+Shower,2
+Lemur,0.4
+Fedora,0.15
+Guacamole,0.05
+Scarf,1.5
+Dolphin,1
+Sombrero,0.2
+Tin can,0.1
+Mug,0.1
+Tap,0.2
+Harbor seal,0.5
+Stretcher,0.2
+Lock,0.05
+Roller skates,0.15
+Coffee cup,0.1
+Straw hat,0.15
+Overall,1
+Cutting board,0.05
+Blender,0.4
+Stove,0.85
+Stop sign,2
+Volleyball,0.22
+Vase,0.3
+Slow cooker,0.3
+Post-it note,0.05
+Wardrobe,2
+Pinwheel,0.5
+Whisk,0.3
+Paper towel,0.3
+Food,0.1
+Sun hat,0.15
+Flying disc,0.05
+Chandelier,1
+Skirt,0.6
+Gas stove,0.85
+Salt and pepper shakers,0.1
+Mechanical fan,1
+Face powder,0.05
+Fax,0.3
+Fruit,0.1
+French fries,0.05
+Nightstand,0.6
+Barrel,1
+Kite,1
+Tart,0.05
+Treadmill,1.5
+Fox,0.4
+Throw pillow,0.2
+Flag,2
+Horn,0.5
+Window blind,1.5
+Golf cart,1.5
+Jacket,1
+Jumpsuit,1
+Egg,0.05
+Street light,5
+Guitar,1
+Pillow,0.2
+Isopod,0.02
+Visor,0.05
+Grape,0.02
+Bookcase,1.8
+Candle hold,0.3
+Power outlet,0.1
+Panda,0.8
+Giraffe,5
+Door handle,0.05
+Rhinoceros,1.5
+Bathtub,0.5
+Stroller,1
+Goldfish,0.05
+Houseplant,0.5
+Goat,0.8
+Baseball bat,0.85
+Baseball glove,0.2
+Top,0.05
+Grandfather clock,2
+Light switch,0.1
+House,5
+Stationary bicycle,1.2
+Hammer,0.3
+Ceiling fan,0.5
+Keychain,0.05
+Adhesive tape,0.05
+Harp,1.5
+Blanket,1.5
+Sandal,0.05
+Bicycle helmet,0.2
+Handheld video game console,0.1
+Saucer,0.05
+Teacup,0.08
+Harpsichord,1
+Heater,0.5
+Harmonica,0.1
+Hamster,0.05
+Hardware,0.05
+Greeting card,0.15
+Curtain,2
+Kettle,0.25
+Bed,3
+Fireplace,1
+Scale,0.1
+Baseball,0.07
+Insect,0.02
+Luggage,0.7
+Hair dryer,0.2
+Indoor rower,0.5
+Food processor,0.3
+Jewellery,0.05
+Refrigerator,1.8
+Wood-burning stove,0.8
+Punching bag,1.5
+Deep fryer,0.3
+Common fig,0.05
+Cocktail shaker,0.25
+Jaguar,0.8
+Golf ball,0.04
+Wireless router,0.1
+Alarm clock,0.1
+Filing cabinet,1.5
+Artichoke,0.1
+Outerwear,1
+Cufflink,0.02
+Motorcycle,1.2
+Table,0.75
+Tableware,0.05
+Kangaroo,1.5
+Koala,0.5
+Knife,0.2
+Bottle,0.3
+Bottle opener,0.15
+Electric toothbrush,0.2
+Lynx,0.5
+Receipt,0.15
+Lighthouse,10
+Dumbbell,0.2
+Bowl,0.1
+Lizard,0.1
+Head-mounted display,0.1
+Lego,0.05
+Check,0.1
+Billiard table,0.8
+Swim cap,0.05
+Frying pan,0.05
+Snowplow,2
+Bathroom cabinet,1.5
+Bust,0.5
+Waffle iron,0.2
+Milk,0.25
+Ring binder,0.05
+Plate,0.05
+Mobile phone,0.15
+Baked goods,0.05
+Mushroom,0.05
+Crutch,1.2
+Mirror,1
+Pitcher,0.25
+Lifejacket,0.5
+Pencil case,0.05
+Sweatpants,1
+Musical keyboard,0.2
+Scoreboard,2
+Briefcase,0.4
+Kitchen knife,0.2
+Magazine,0.3
+Table tennis racket,0.25
+Portable media player,0.1
+Hoodie,0.7
+Nail,0.05
+Tennis ball,0.07
+Oboe,0.6
+Chest of drawers,1.2
+Ostrich,2.5
+Painting,1
+Piano,1.2
+Playing card,0.05
+Plant,0.5
+Passport,0.1
+Potato,0.1
+Pasta,0.05
+Penguin,0.6
+Pumpkin,0.3
+Pear,0.1
+Infant bed,0.5
+Polar bear,1.5
+Mixer,0.3
+Cupboard,1.5
+Jacuzzi,0.5
+Pizza,0.05
+Pig,0.8
+Digital clock,0.1
+Snowboard,1.5
+Skateboard,0.2
+Rifle,1
+Lipstick,0.08
+Raven,0.3
+High heels,0.1
+Red panda,0.4
+Rabbit,0.3
+Sculpture,1
+Saxophone,0.8
+Shotgun,1
+Submarine sandwich,0.2
+Ship,10
+Shoe,0.1
+Sword,1
+Picture frame,0.5
+Sushi,0.05
+Loveseat,0.8
+Ski,1.8
+Squirrel,0.2
+Tripod,1.5
+Stethoscope,0.5
+Submarine,5
+Scorpion,0.05
+Segway,1.5
+Weight training bench,0.5
+Snake,0.1
+Coffee table,0.4
+Video game console,0.1
+Sheep,0.8
+Single-lens reflex camera,0.15
+Television,0.5
+Trombone,1
+Tank,3
+Taco,0.1
+Telephone,0.2
+Torch,0.2
+Tiger,1
+Strawberry,0.03
+Trumpet,0.5
+Tomato,0.05
+Train,3
+Pants,1
+Football helmet,0.3
+Truck,3
+Measuring cup,0.1
+Coffeemaker,0.3
+Violin,0.6
+Vacuum,1
+Handbag,0.3
+Weapon,1
+Wheel,0.7
+Worm,0.02
+Wok,0.1
+Whale,5
+Zebra,1.5
+Carseat,0.5
+Jug,0.25
+Light fixture,0.5
+Pizza cutter,0.15
+Cream,0.1
+Monkey,0.5
+Lion,1
+Bread,0.1
+Chicken,0.4
+Eagle,0.5
+Helicopter,3
+Owl,0.3
+Duck,0.3
+Turtle,0.2
+Hippopotamus,1.5
+Crocodile,0.5
+Toilet,0.4
+Garden gnome,0.3
+Toilet paper,0.15
+Squid,0.3
+Clothing,1
+Footwear,0.1
+Lemon,0.05
+Sneakers,0.1
+Spider,0.02
+Deer,1.2
+Ring,0.02
+Frog,0.05
+Banana,0.15
+Rocket,10
+Wine glass,0.2
+Oyster,0.05
+Chisel,0.2
+Ant,0.01
+Countertop,0.9
+Optical disc,0.01
+Tablet computer,0.2
+Waste container,1
+Electronic device,0.2
+Book,0.2
+Elephant,3
+Robotic vacuum cleaner,0.1
+Shark,2
+Toy block,0.05
+Candle,0.2
+Leopard,0.8
+Axe,0.8
+Hand dryer,0.3
+Soap dispenser,0.2
+Porcupine,0.3
+Flower,0.3
+Furniture,1
+Canary,0.15
+Cheetah,0.8
+Hamburger,0.1
+Satchel,0.4
+Loudspeaker,0.5
+Building,10
+Fish,0.2
+Lobster,0.3
+Asparagus,0.15
+Hedgehog,0.2
+Airplane,5
+Spoon,0.15
+Otter,0.5
+Bull,1.5
+Underpants,0.5
+Projector,0.2
+Bench,0.5
+Driver's license,0.05
+Ice cream,0.1
+Caterpillar,0.05
+Butterfly,0.05
+Parachute,2
+Orange,0.08
+Antelope,1.2
+Beaker,0.15
+Romper,0.5
+Window,1.5
+Castle,10
+Jellyfish,0.3
+Moths and butterflies,0.05
+Goose,0.5
+Mule,1.5
+Swan,0.5
+Peach,0.05
+Coconut,0.1
+Scooter,1
+Soccer ball,0.22
+Raccoon,0.3
+Fork,0.15
+Lamp,0.5
+Camera,0.15
+Squash,0.15
+Racket,0.7
+Vegetable,0.1
+Diaper,0.05
+Unicycle,1.2
+Falcon,0.3
+Apron,0.8
+Chime,0.5
+Snail,0.05
+Cabbage,0.15
+Carrot,0.15
+Mango,0.1
+Jeans,1
+Flowerpot,0.3
+Pineapple,0.2
+Stool,0.5
+Basketball,0.24
+Envelope,0.05
+Cake,0.1
+Dragonfly,0.05
+Microwave oven,0.3
+Honeycomb,0.05
+Drone,0.3
+Sea lion,0.8
+Barcode,0.01
+Lady bug,0.01
+Shelf,1.5
+Watch,0.05
+Candy,0.05
+Salad,0.05
+Parrot,0.3
+Handgun,0.2
+Sparrow,0.15
+Van,2.5
+Ice skate,0.15
+Grinder,0.3
+Spice rack,0.3
+Light bulb,0.1
+Toy vehicle,0.1
+Corded phone,0.2
+Dartboard,0.5
+Tennis racket,0.7
+Wall clock,0.3
+Serving tray,0.05
+Kitchen & dining room table,0.75
+Dog bed,0.2
+Cake stand,0.2
+Baby carrier,0.5
+Facial tissue holder,0.15
+Pressure cooker,0.3
+Shipping box,0.5
+Kitchen Appliance,0.5
+Tire,0.7
+Ruler,0.3
+Luggage & bags,0.7
+Object,1.5

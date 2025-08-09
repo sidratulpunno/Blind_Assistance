@@ -50,4 +50,5 @@ flutter:
     - assets/ml/
     - assets/images/
     - .env
+    - assets/ObjectLabelWithHeights.csv
 

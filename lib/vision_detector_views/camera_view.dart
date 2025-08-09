@@ -141,7 +141,7 @@ class _CameraViewState extends State<CameraView> {
                 },
                 child: Container(
                   padding: const EdgeInsets.symmetric(
-                      horizontal: 50.0, vertical: 33.0),
+                      horizontal: 75.0, vertical: 38.0),
                   decoration: BoxDecoration(
                     gradient: const LinearGradient(
                       colors: [Color(0xFF2E3192), Color(0xFF1BFFFF)],
@@ -176,8 +176,8 @@ class _CameraViewState extends State<CameraView> {
               ),
             ],
           ),
-          _switchLiveCameraToggle(),
-          _detectionViewModeToggle(),
+          // _switchLiveCameraToggle(),
+          // _detectionViewModeToggle(),
         ],
       ),
     );

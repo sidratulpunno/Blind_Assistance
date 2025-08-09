@@ -1,19 +1,25 @@
-import 'package:flutter/material.dart';
-import 'package:connectivity_plus/connectivity_plus.dart';
 import 'dart:async';
+
+import 'package:connectivity_plus/connectivity_plus.dart';
+import 'package:flutter/material.dart';
+import 'package:flutter_dotenv/flutter_dotenv.dart';
+import 'package:google_ml_kit_example/tts_service.dart';
 
 import 'home_screen.dart';
 import 'vision_detector_views/object_detector_view.dart';
-import 'package:google_ml_kit_example/tts_service.dart';
-import 'package:flutter_dotenv/flutter_dotenv.dart';
 
+// ✅ Global navigator key
 final GlobalKey<NavigatorState> navigatorKey = GlobalKey<NavigatorState>();
+
+// ✅ Global variables for connectivity state
+bool isOfflineGlobal = false;
+String? currentRouteGlobal;
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await dotenv.load();
 
-  // This initial welcome message is still useful for when the app first boots up.
+  // Initial welcome message
   TTSService ttsService = TTSService();
   String welcomeMessage = "App is ready";
   await ttsService.speak(welcomeMessage);
@@ -29,13 +35,12 @@ class MyApp extends StatefulWidget {
 class _MyAppState extends State<MyApp> {
   late StreamSubscription<List<ConnectivityResult>> _connectivitySubscription;
 
-  // ✅ STEP 1: Add a TTSService instance to the state.
+  // TTS Service
   late final TTSService _ttsService;
 
   @override
   void initState() {
     super.initState();
-    // ✅ STEP 2: Initialize the TTS service.
     _ttsService = TTSService();
 
     _connectivitySubscription =
@@ -46,7 +51,7 @@ class _MyAppState extends State<MyApp> {
   @override
   void dispose() {
     _connectivitySubscription.cancel();
-    _ttsService.stop(); // Good practice to stop TTS on dispose
+    _ttsService.stop();
     super.dispose();
   }
 
@@ -59,23 +64,20 @@ class _MyAppState extends State<MyApp> {
     final navigator = navigatorKey.currentState;
     if (navigator == null) return;
 
-    String? currentRoute;
+    // Update global current route
     navigator.popUntil((route) {
-      currentRoute = route.settings.name;
+      currentRouteGlobal = route.settings.name;
       return true;
     });
 
-    final bool isOffline = result.contains(ConnectivityResult.none);
+    // Update global offline status
+    isOfflineGlobal = result.contains(ConnectivityResult.none);
 
-    // ✅ STEP 3: Add the TTS calls before navigating.
-    if (isOffline && currentRoute != '/objectDetector') {
-      // Announce the switch to offline mode.
+    // Navigation logic
+    if (isOfflineGlobal && currentRouteGlobal != '/objectDetector') {
       _ttsService.speak("you are in offline mode");
       navigator.pushReplacementNamed('/objectDetector');
-    } else if (!isOffline && currentRoute != '/home') {
-      // Announce the switch to online mode with instructions.
-      // _ttsService.speak(
-      //     "you are online. please Press the button and say 'give direction', 'describe', or 'offline direction'.");
+    } else if (!isOfflineGlobal && currentRouteGlobal != '/home') {
       navigator.pushReplacementNamed('/home');
     }
   }
