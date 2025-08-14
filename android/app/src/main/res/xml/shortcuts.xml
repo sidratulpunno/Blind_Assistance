@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shortcuts xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <capability android:name="actions.intent.OPEN_APP">
+        <intent
+            android:action="android.intent.action.VIEW"
+            android:targetClass="com.example.myapplication.Activity1"
+            android:targetPackage="com.google.ml.kit.flutter.example">
+            <parameter
+                android:name="exercise.name"
+                android:key="exerciseType"
+                android:required="true" />
+        </intent>
+        <intent
+            android:action="android.intent.action.VIEW"
+            android:targetClass="com.example.myapplication.Activity2"></intent>
+    </capability>
+</shortcuts>
